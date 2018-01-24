@@ -3,6 +3,9 @@
         <section class="section">
             <div class="columns is-multiline">
                 <div class="column is-12">
+                    <div class="content has-text-centered">
+                        <h1>Noughts &amp; Crosses</h1>
+                    </div>
                     <table class="table is-bordered is-fullwidth">
                         <tbody>
                         <tr class="has-text-centered">
