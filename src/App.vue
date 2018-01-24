@@ -22,8 +22,16 @@
                         </tr>
                         </tbody>
                     </table>
-                    <div class="content">
-                        <h1>Winner: {{ winner }}</h1>
+                    <div class="modal" :class="{'is-active' : winner != ''}">
+                        <div class="modal-background" v-on:click="resetGame()"></div>
+                        <div class="modal-content">
+                            <div class="notification is-success">
+                                <div class="content">
+                                    <h1 class="title">Winner: {{ winner }}</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="modal-close is-large" aria-label="close" v-on:click="resetGame()"></button>
                     </div>
                 </div>
             </div>
@@ -85,6 +93,8 @@
                 if(hasWon)
                 {
                     this.winner = this.currentPlayer;
+
+
                 } else if(hasWon === 'Stalemate')
                 {
                     this.winner = 'Stalemate';
@@ -106,6 +116,14 @@
                 } else {
                     return 'Stalemate';
                 }
+            },
+            resetGame()
+            {
+                this.winner = '';
+                this.cells.forEach((cell) => {
+                    cell.value = '-';
+                });
+                this.cellValues = [];
             }
         }
     }

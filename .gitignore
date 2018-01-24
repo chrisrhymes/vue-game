@@ -1,6 +1,7 @@
 .DS_Store
 node_modules/
-dist/
+# Remove dist for demonstration purposes
+#dist/
 npm-debug.log
 yarn-error.log
 
