@@ -1,8 +1,8 @@
 <template>
     <div id="app">
         <section class="section">
-            <div class="columns">
-                <div class="column">
+            <div class="columns is-multiline">
+                <div class="column is-12">
                     <table class="table is-bordered is-fullwidth">
                         <tbody>
                         <tr class="has-text-centered">
@@ -33,6 +33,9 @@
                         </div>
                         <button class="modal-close is-large" aria-label="close" v-on:click="resetGame()"></button>
                     </div>
+                </div>
+                <div class="column is-12">
+                    <p class="has-text-centered">Made by <a href="http://www.csrhymes.com">C.S. Rhymes</a></p>
                 </div>
             </div>
         </section>
